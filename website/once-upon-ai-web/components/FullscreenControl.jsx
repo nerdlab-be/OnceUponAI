@@ -29,7 +29,7 @@ export default function FullscreenControl({ onFullscreen }) {
         -o-transition: all 1s ease;
         transition: all 1s ease;
         min-width: 170px;
-        
+
         &:hover {
           opacity: 0.67;
           transform: scale(0.95);

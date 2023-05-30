@@ -5,7 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import dynamic from "next/dynamic";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { RouteContext } from "@/context/RouteContext";
 import { useRouter } from "next/router";
 
@@ -51,7 +51,7 @@ const MapContainer = styled.div`
 `;
 
 const MapFullScreen = styled.div`
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
 `;
 
@@ -66,6 +66,17 @@ export default function Route({ routeObjects }) {
   const [isMapFullscreen, setIsMapFullscreen] = useState(false);
 
   const { showModal, openModal, closeModal } = useModal(false);
+
+  useEffect(() => {
+    const setVh = () => {
+      document.documentElement.style.setProperty("--vh", `${window.innerHeight / 100}px`);
+    };
+    setVh(); // Initial set
+    window.addEventListener("resize", setVh);
+    return () => {
+      window.removeEventListener("resize", setVh);
+    };
+  }, []);
 
   // Objects fetched from db using a specific routeId take precedence over objects in context
   if (!routeObjects) {
