@@ -127,8 +127,7 @@ export const getServerSideProps = async ({ locale }) => ({
 });
 
 async function createWalk(messages) {
-  // TODO: Replace http://127.0.0.1:8000/ with host once deployed
-  const response = await fetch("http://127.0.0.1:8000/api/walk/", {
+  const response = await fetch("https://shark-app-btlg9.ondigitalocean.app/api/walk/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -232,7 +231,6 @@ export default function Chat() {
               <StartRoute onClick={goToRoute}>{t("start_route")}</StartRoute>
               {hasFinishedChatting && (
                 <>
-                  
                   <StopChatting href="/start-your-tour/chat" onClick={() => router.reload()}>
                     {t("start_again")}
                   </StopChatting>
