@@ -76,6 +76,7 @@ export const RightBlock = styled.div`
   flex-direction: column;
   gap: 16px;
   max-height: 100%;
+  display: ${(props) => (props.isMapFullscreen ? "none" : "visible")};
 
   @media (max-width: 768px) {
     display: none;

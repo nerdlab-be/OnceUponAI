@@ -53,7 +53,8 @@ export default function FullscreenControl({ onFullscreen }) {
         &:before {
           left: 0;
           transform: translate(-50%, -9.5px);
-        }`;
+        }
+        `;
       L.DomEvent.on(button, "click", function () {
         onFullscreen();
       });

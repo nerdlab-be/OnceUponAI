@@ -124,7 +124,7 @@ export default function Route({ routeObjects }) {
           <MapFullScreen>
             <Map pois={routeObjects} setIsMapFullscreen={setIsMapFullscreen} />
           </MapFullScreen>
-          <RightBlock>
+          <RightBlock isMapFullscreen={isMapFullscreen}>
             <ArtworkSidebar className="artwork-container">
               {routeObjects.map((artwork, index) => (
                 <Artwork key={index} artwork={artwork} />
