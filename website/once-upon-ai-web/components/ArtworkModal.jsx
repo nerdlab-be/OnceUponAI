@@ -37,15 +37,24 @@ const Container = styled.div`
   &::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
   }
+
+  @media (min-width: 768px) {
+    max-width: unset;
+    display: grid;
+    grid-template-areas: 'title image' 'description image' 'position image''close image';
+  }
 `;
 
 const Title = styled.h2``;
 
 const Image = styled.img`
   max-height: 400px;
+  grid-area: image;
 `;
 
-const Description = styled.p``;
+const Description = styled.p`
+  grid-area: description;
+  `;
 
 const CloseButtonX = styled.button`
   position: absolute;
@@ -64,6 +73,52 @@ const CloseButtonX = styled.button`
   align-items: center;
   border-radius: 50%;
   padding: 5px;
+`;
+
+const CloseButton = styled.button`
+margin-left: 17px;
+font-family: "Mazius Review Extra", sans-serif;
+max-width: 150px;
+position: relative;
+border: 1.5px solid black;
+padding: 8px 32px;
+text-align: center;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+cursor: pointer;
+grid-area: close;
+align-self: end;
+
+&:hover {
+  opacity: 0.67;
+  transform: scale(0.95);
+}
+&:before,
+&:after {
+  content: "";
+  aspect-ratio: 1 / 1;
+  height: calc(3px + 100%);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  position: absolute;
+  box-sizing: border-box;
+}
+&:after {
+  right: 0;
+  transform: translate(50%, -9.5px);
+}
+&:before {
+  left: 0;
+  transform: translate(-50%, -9.5px);
+}
+`;
+
+const Adress = styled.p`
+ grid-area: position;
 `;
 
 /**
@@ -88,8 +143,8 @@ function ArtworkModal({ artwork, showModal, closeModal }) {
         <Title>{artwork.title}</Title>
         {artwork.image_url && <Image src={artwork.image_url} alt={artwork.title} />}
         <Description>{artwork.description}</Description>
-        <p>{artwork.address}</p>
-        <button onClick={closeModal}>{t("close_info")}</button>
+        <Adress>{artwork.address}</Adress>
+        <CloseButton onClick={closeModal}>{t("close_info")}</CloseButton>
       </Container>
     </ReactModal>
   );

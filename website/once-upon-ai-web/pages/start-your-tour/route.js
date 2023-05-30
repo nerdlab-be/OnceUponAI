@@ -146,6 +146,9 @@ export default function Route({ routeObjects }) {
                   <Title>{t("walking_route_title")}</Title>
                   <Description>{t("walking_route_description")}</Description>
                   <RouteContainer>
+                    <MapContainer>
+                      <Map pois={routeObjects} setIsMapFullscreen={setIsMapFullscreen} />
+                    </MapContainer>
                     {router.query.routeId == null && (
                       <SaveRoutebutton onClick={() => onSaveRoute(routeObjects)}>
                         {isSavingRoute ? t("saving") : saveButtonText}
@@ -154,9 +157,6 @@ export default function Route({ routeObjects }) {
                     {router.query.routeId == null && savedRouteId && (
                       <QrModal link={getSavedRouteLink()} showModal={showModal} closeModal={closeModal} />
                     )}
-                    <MapContainer>
-                      <Map pois={routeObjects} setIsMapFullscreen={setIsMapFullscreen} />
-                    </MapContainer>
                   </RouteContainer>
                 </LeftBlock>
                 <RightBlock>

@@ -28,11 +28,11 @@ const Poi = ({ locations }) => {
     const eventImage = event.target["_icon"];
     if (event.type == "mouseover") {
       sideBarElement.classList.add("poi-sidebar-active");
-      sideBarElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+      sideBarElement.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
       eventImage.classList.add("poi-marker-active");
       eventImage.classList.remove("poi-marker-non-active");
     } else {
-      // sideBarElement.classList.remove('poi-sidebar-active');
+      sideBarElement.classList.remove('poi-sidebar-active');
       eventImage.classList.add("poi-marker-non-active");
       eventImage.classList.remove("poi-marker-active");
     }
@@ -53,13 +53,13 @@ const Poi = ({ locations }) => {
     <Marker
       eventHandlers={{
         mouseover: (e) => {
-          markerHover(e, location.object_id);
+          markerHover(e, location.object_id, true);
         },
         mousedown: (e) => {
           markedClicked(e, location.object_id);
         },
         mouseout: (e) => {
-          markerHover(e, location.object_id);
+          markerHover(e, location.object_id, false);
         },
       }}
       key={location.object_id}

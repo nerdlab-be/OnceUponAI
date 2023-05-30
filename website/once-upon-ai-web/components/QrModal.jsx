@@ -42,10 +42,48 @@ const Subtitle = styled.h3`
 
 const RouteLink = styled(Link)`
   color: black;
+  max-width: 90%;
+  word-break: break-all;
 `;
 
 const CloseButton = styled.button`
   padding: 8px 32px;
+
+  font-family: "Mazius Review Extra", sans-serif;
+
+  position: relative;
+  border: 1.5px solid black;
+  padding: 8px 32px;
+  text-align: center;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.67;
+    transform: scale(0.95);
+  }
+  &:before,
+  &:after {
+    content: "";
+    aspect-ratio: 1 / 1;
+    height: calc(3px + 100%);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1.5px solid black;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  &:after {
+    right: 0;
+    transform: translate(50%, -9.5px);
+  }
+  &:before {
+    left: 0;
+    transform: translate(-50%, -9.5px);
+  }
 `;
 
 function QrModal({ link, showModal, closeModal }) {

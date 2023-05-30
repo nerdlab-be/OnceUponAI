@@ -12,24 +12,27 @@ export default function FullscreenControl({ onFullscreen }) {
 
     control.onAdd = function () {
       const button = L.DomUtil.create("button");
-      button.textContent = "Toggle Fullscreen";
+      button.innerText = "⛶";
       button.style = `
         font-family: "Mazius Review Extra", sans-serif;
         background-color: transparent;
+        font-size: 1.5rem;
+        font-weight: bold;
         color: black;
         margin-top: 8px;
         box-sizing: border-box;
         position: relative;
         border: 1.5px solid black;
-        padding: 8px 32px;
+        padding: 8px 18px;
         text-align: center;
         overflow: hidden;
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;
         -o-transition: all 1s ease;
         transition: all 1s ease;
-        min-width: 170px;
-
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.4)  ;
+        border-radius: 15px;
         &:hover {
           opacity: 0.67;
           transform: scale(0.95);
