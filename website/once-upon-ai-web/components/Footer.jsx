@@ -13,6 +13,11 @@ const StyledFooter = styled.footer`
   * {
     font-size: 0.85rem;
   }
+
+	@media (max-width: 768px) {
+    flex-direction: column;
+		gap: 1rem;
+  }
 `;
 
 const SponsorDiv = styled.div`
@@ -22,7 +27,7 @@ const SponsorDiv = styled.div`
 	justify-content: center;
 	height: 50px;
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: row;
     text-align: right;
   }
 `;
@@ -35,7 +40,7 @@ const NavList = styled.ul`
   align-items: center;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: row;
     text-align: right;
   }
 `;

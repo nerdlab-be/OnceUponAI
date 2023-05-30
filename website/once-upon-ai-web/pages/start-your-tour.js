@@ -33,11 +33,12 @@ const StartChat = styled(Link)`
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
-  overflow: hidden;
+  /* overflow: hidden; */
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+  margin: auto;
 
   &:hover {
     opacity: 0.67;
@@ -47,7 +48,7 @@ const StartChat = styled(Link)`
   &:after {
     content: "";
     aspect-ratio: 1 / 1;
-    height: calc(3px + 100%);
+    height: calc(2px + 100%);
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -57,11 +58,11 @@ const StartChat = styled(Link)`
   }
   &:after {
     right: 0;
-    transform: translate(50%, 0.5px);
+    transform: translate(50%, -.5px);
   }
   &:before {
     left: 0;
-    transform: translate(-50%, 0.5px);
+    transform: translate(-50%, -.5px);
   }
 `;
 

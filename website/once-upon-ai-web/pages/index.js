@@ -94,7 +94,7 @@ const StartGuide = styled(Link)`
   &:after {
     content: "";
     aspect-ratio: 1 / 1;
-    height: calc(3px + 100%);
+    height: calc(2px + 100%);
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -146,7 +146,7 @@ const GraphicElement = styled.div`
   &:after {
     content: "";
     aspect-ratio: 1 / 1;
-    width: calc(3px + 100%);
+    width: calc(2px + 100%);
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
