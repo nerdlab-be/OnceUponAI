@@ -16,11 +16,11 @@ export const BackButton = styled(Link)`
   position: relative;
   border: 1.5px solid white;
   padding: 8px 32px;
-  overflow: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+  margin-left: 16px;
 
   &:hover {
     opacity: 0.67;
@@ -119,11 +119,13 @@ export const SaveRoutebutton = styled.button`
   border: 1.5px solid white;
   padding: 8px 32px;
   text-align: center;
-  overflow: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+
+  margin-left: 16px;
+  margin-right: 16px;
 
   &:hover {
     opacity: 0.67;

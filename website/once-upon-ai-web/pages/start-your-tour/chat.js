@@ -57,11 +57,11 @@ const StartRoute = styled.button`
   border: 1.5px solid white;
   padding: 8px 32px;
   text-align: center;
-  overflow: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.67;
@@ -206,6 +206,7 @@ export default function Chat() {
   const onKeyPress = (button) => {
     console.log("Button pressed", button);
   };
+
   if (hasFinishedChatting) {
     document.querySelector(".react-chatbot-kit-chat-input").disabled = true;
     document.querySelector(".react-chatbot-kit-chat-btn-send").disabled = true;

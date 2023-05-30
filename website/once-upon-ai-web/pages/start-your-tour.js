@@ -24,6 +24,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   gap: 32px;
   max-width: 500px;
+  padding: 16px;
 `;
 
 const StartChat = styled(Link)`
@@ -33,11 +34,11 @@ const StartChat = styled(Link)`
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
-  overflow: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+  margin-left: 16px;
 
   &:hover {
     opacity: 0.67;
