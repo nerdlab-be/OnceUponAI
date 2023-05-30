@@ -21,6 +21,7 @@ const customStyles = {
   },
 };
 
+
 ReactModal.setAppElement("#__next");
 
 const Container = styled.div`
@@ -41,7 +42,9 @@ const Container = styled.div`
   @media (min-width: 768px) {
     max-width: unset;
     display: grid;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-areas: 'title image' 'description image' 'position image''close image';
+    margin: 0 15%;
   }
 `;
 
@@ -50,6 +53,7 @@ const Title = styled.h2``;
 const Image = styled.img`
   max-height: 400px;
   grid-area: image;
+  justify-self: center;
 `;
 
 const Description = styled.p`
