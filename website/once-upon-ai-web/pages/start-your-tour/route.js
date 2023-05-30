@@ -28,7 +28,7 @@ import { useModal } from "@/utils/route-hooks";
 import styled from "@emotion/styled";
 
 export async function getServerSideProps({ locale, query }) {
-  console.log("route query:", query);
+  // console.log("route query:", query);
 
   let routeObjects = null;
   if (query.routeId) {

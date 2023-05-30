@@ -18,6 +18,7 @@ const hoverIcon = new L.icon({
 });
 
 const Poi = ({ locations }) => {
+  const container = document.querySelector(".artwork-container");
   if (!locations) {
     return;
   }
@@ -28,7 +29,7 @@ const Poi = ({ locations }) => {
     const eventImage = event.target["_icon"];
     if (event.type == "mouseover") {
       sideBarElement.classList.add("poi-sidebar-active");
-      sideBarElement.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+      container.scrollTo({ behavior: "smooth", top: sideBarElement.offsetTop - 2 * sideBarElement.offsetHeight  });
       eventImage.classList.add("poi-marker-active");
       eventImage.classList.remove("poi-marker-non-active");
     } else {
