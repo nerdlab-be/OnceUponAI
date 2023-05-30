@@ -28,6 +28,7 @@ const Description = (props) => {
           -moz-transition: all 1s ease;
           -o-transition: all 1s ease;
           transition: all 1s ease;
+          min-width: 170px;
         
           &:hover {
             opacity: 0.67;

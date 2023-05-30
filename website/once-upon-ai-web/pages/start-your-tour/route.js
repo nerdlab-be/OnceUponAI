@@ -25,6 +25,7 @@ import Artwork from "@/components/Artwork";
 import QrModal from "@/components/QrModal";
 import { getRouteById, saveRoute } from "@/utils/route-api";
 import { useModal } from "@/utils/route-hooks";
+import styled from "@emotion/styled";
 
 export async function getServerSideProps({ locale, query }) {
   console.log("route query:", query);
@@ -44,6 +45,16 @@ export async function getServerSideProps({ locale, query }) {
   };
 }
 
+const MapContainer = styled.div`
+  height: 600px;
+  width: 100%;
+`;
+
+const MapFullScreen = styled.div`
+  height: 100vh;
+  width: 100vw;
+`;
+
 export default function Route({ routeObjects }) {
   const { t } = useTranslation();
   const router = useRouter();
@@ -52,6 +63,7 @@ export default function Route({ routeObjects }) {
   const [saveButtonText, setSaveButtonText] = useState(t("save-route"));
   const [isSavingRoute, setIsSavingRoute] = useState(false);
   const [savedRouteId, setSavedRouteId] = useState("");
+  const [isMapFullscreen, setIsMapFullscreen] = useState(false);
 
   const { showModal, openModal, closeModal } = useModal(false);
 
@@ -96,41 +108,59 @@ export default function Route({ routeObjects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <PageContainer>
-        <WidthContainer>
-          <Container>
-            <BackButton href="/start-your-tour">
-              <IoIosArrowBack />
-              {t("back_to_beginning")}
-            </BackButton>
-            <Content>
-              <LeftBlock>
-                <Title>{t("walking_route_title")}</Title>
-                <Description>{t("walking_route_description")}</Description>
-                <RouteContainer>
-                  {router.query.routeId == null && (
-                    <SaveRoutebutton onClick={() => onSaveRoute(routeObjects)}>
-                      {isSavingRoute ? t("saving") : saveButtonText}
-                    </SaveRoutebutton>
-                  )}
-                  {router.query.routeId == null && savedRouteId && (
-                    <QrModal link={getSavedRouteLink()} showModal={showModal} closeModal={closeModal} />
-                  )}
-                  <Map pois={routeObjects} />
-                </RouteContainer>
-              </LeftBlock>
-              <RightBlock>
-                <Title>{t("art_pieces")}</Title>
-                <ArtworkSidebar className="artwork-container">
-                  {routeObjects.map((artwork, index) => (
-                    <Artwork key={index} artwork={artwork} />
-                  ))}
-                </ArtworkSidebar>
-              </RightBlock>
-            </Content>
-          </Container>
-        </WidthContainer>
-      </PageContainer>
+      {isMapFullscreen && (
+        <>
+          <MapFullScreen>
+            <Map pois={routeObjects} setIsMapFullscreen={setIsMapFullscreen} />
+          </MapFullScreen>
+          <RightBlock>
+            <ArtworkSidebar className="artwork-container">
+              {routeObjects.map((artwork, index) => (
+                <Artwork key={index} artwork={artwork} />
+              ))}
+            </ArtworkSidebar>
+          </RightBlock>
+        </>
+      )}
+      {!isMapFullscreen && (
+        <PageContainer>
+          <WidthContainer>
+            <Container>
+              <BackButton href="/start-your-tour">
+                <IoIosArrowBack />
+                {t("back_to_beginning")}
+              </BackButton>
+              <Content>
+                <LeftBlock>
+                  <Title>{t("walking_route_title")}</Title>
+                  <Description>{t("walking_route_description")}</Description>
+                  <RouteContainer>
+                    {router.query.routeId == null && (
+                      <SaveRoutebutton onClick={() => onSaveRoute(routeObjects)}>
+                        {isSavingRoute ? t("saving") : saveButtonText}
+                      </SaveRoutebutton>
+                    )}
+                    {router.query.routeId == null && savedRouteId && (
+                      <QrModal link={getSavedRouteLink()} showModal={showModal} closeModal={closeModal} />
+                    )}
+                    <MapContainer>
+                      <Map pois={routeObjects} setIsMapFullscreen={setIsMapFullscreen} />
+                    </MapContainer>
+                  </RouteContainer>
+                </LeftBlock>
+                <RightBlock>
+                  <Title>{t("art_pieces")}</Title>
+                  <ArtworkSidebar className="artwork-container">
+                    {routeObjects.map((artwork, index) => (
+                      <Artwork key={index} artwork={artwork} />
+                    ))}
+                  </ArtworkSidebar>
+                </RightBlock>
+              </Content>
+            </Container>
+          </WidthContainer>
+        </PageContainer>
+      )}
     </div>
   );
 }
