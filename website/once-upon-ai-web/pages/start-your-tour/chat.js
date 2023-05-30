@@ -127,7 +127,7 @@ export const getServerSideProps = async ({ locale }) => ({
 });
 
 async function createWalk(messages) {
-  const response = await fetch("https://shark-app-btlg9.ondigitalocean.app/api/walk/", {
+  const response = await fetch("https://127.0.0.1:8080/api/walk/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
