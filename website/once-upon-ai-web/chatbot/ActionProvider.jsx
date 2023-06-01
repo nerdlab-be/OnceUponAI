@@ -63,7 +63,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const handleName = async (message) => {
 		conversation.push(message);
-		message = 'Use max 25 words to greet the user with the name '+ message + '. Propose to do a city tour and ask about the users interests. Keep writing in Dutch.';
+		message = 'Use max 25 words to greet the user with the name '+ message + '';
     const response = await sendMessageToChatbot(message);
     const botMessage = createChatBotMessage(response);
     addResponse(botMessage);

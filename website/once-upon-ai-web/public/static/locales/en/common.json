@@ -11,11 +11,11 @@
   "faq_and_help": "Faq & Help",
   "faq_title_long": "Frequently Asked Questions",
 
-  "index_step_1_title": "Chat with Jos",
-  "index_step_1_description": "In the 'Once Upon an AI' app, you can chat with an AI named Jos to get to know your preferences. Answer Jos's questions and he will remember your preferences for future interactions.",
+  "index_step_1_title": "Chat with Drako",
+  "index_step_1_description": "In the 'Once Upon an AI' app, you can chat with an AI named Drako to get to know your preferences. Answer Drako's questions and he will remember your preferences for future interactions.",
 
   "index_step_2_title": "Generate your route",
-  "index_step_2_description": "With the AI navigation feature of the 'Once Upon an AI' app, you can determine the route to walk through Ghent. Share your preferences with Jos and he will suggest the best route.",
+  "index_step_2_description": "With the AI navigation feature of the 'Once Upon an AI' app, you can determine the route to walk through Ghent. Share your preferences with Drako and he will suggest the best route.",
 
   "index_step_3_title": "Explore the city",
   "index_step_3_description": "Be surprised and explore the city in a new way with a generated route in the 'Once Upon an AI' app. Discover unexpected gems and create memories you'll never forget!",
@@ -23,17 +23,17 @@
   "index_step_4_title": "Scan the QR codes",
   "index_step_4_description": "Work in Progress. The QR codes will give you more information about objects you may encounter in the city. This will also give you access to certain routes.",
 
-  "index_faq_1_question": "Why should I use Jos?",
-  "index_faq_1_answer": "Jos offers a unique and personalized way to explore Gent's art scene. By chatting with you, the AI-powered bot tailors the art tour to your preferences, creating a memorable and engaging experience that showcases the city's rich artistic heritage.",
+  "index_faq_1_question": "Why should I use Drako?",
+  "index_faq_1_answer": "Drako offers a unique and personalized way to explore Gent's art scene. By chatting with you, the AI-powered bot tailors the art tour to your preferences, creating a memorable and engaging experience that showcases the city's rich artistic heritage.",
 
-  "index_faq_2_question": "How does Jos work?",
-  "index_faq_2_answer": "Jos uses GPT, an advanced AI language model, to engage you in a conversation and learn about your preferences. Based on your input, it selects artworks from an extensive database and creates a custom walking route that includes QR code hotspots for additional information.",
+  "index_faq_2_question": "How does Drako work?",
+  "index_faq_2_answer": "Drako uses GPT, an advanced AI language model, to engage you in a conversation and learn about your preferences. Based on your input, it selects artworks from an extensive database and creates a custom walking route that includes QR code hotspots for additional information.",
 
   "index_faq_3_question": "What is ChatGPT?",
-  "index_faq_3_answer": "ChatGPT is an AI language model developed by OpenAI. It can understand and generate human-like text, making it ideal for applications such as chatbots. Jos is built using ChatGPT to provide a seamless, interactive, and engaging user experience.",
+  "index_faq_3_answer": "ChatGPT is an AI language model developed by OpenAI. It can understand and generate human-like text, making it ideal for applications such as chatbots. Drako is built using ChatGPT to provide a seamless, interactive, and engaging user experience.",
 
-  "index_faq_4_question": "Is my personal data safe with Jos?",
-  "index_faq_4_answer": "We value your privacy and take all necessary measures to protect your personal information. Jos only uses your preferences to create a personalized art tour, and we do not store any sensitive personal data.",
+  "index_faq_4_question": "Is my personal data safe with Drako?",
+  "index_faq_4_answer": "We value your privacy and take all necessary measures to protect your personal information. Drako only uses your preferences to create a personalized art tour, and we do not store any sensitive personal data.",
 
   "index_faq_5_question": "Other questions?",
   "index_faq_5_answer": "Contact the creators of Once Upon AI, this can be done through Nerdlab's Discord.",
@@ -41,11 +41,11 @@
   "ai_generated_routes": "AI generated Ghent walks",
   "start_guide": "Start the guide",
   "how_does_it_work": "How does it work?",
-  "chatbot_route_intro_title": "Hello, my name is Jos!",
-  "chatbot_route_intro_description": "Embark on a personalized art journey through Gent! Chat with me, Jos, to share your preferences. I'll create a unique walking route with intriguing artworks and fascinating details. Let's make your Gent art adventure unforgettable!",
+  "chatbot_route_intro_title": "Hello, my name is Drako!",
+  "chatbot_route_intro_description": "Embark on a personalized art journey through Gent! Chat with me, Drako, to share your preferences. I'll create a unique walking route with intriguing artworks and fascinating details. Let's make your Gent art adventure unforgettable!",
   "chatbot_route_intro_start_button": "Start Chatting",
 
-  "chat_with_jos": "Chat with Jos",
+  "chat_with_Drako": "Chat with Drako",
 
   "start_route": "Start Route",
   "start_again": "Start again",

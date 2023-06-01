@@ -86,7 +86,7 @@ export default function StartYourTour() {
       <CenteredPageContainer>
         <WidthContainer>
           <CenterContainer>
-            <Image src="/jos.png" width={300} height={200} alt="Robot Image" />
+            <Image src="/drako.png" width={300} height={200} alt="Robot Image" />
             <ContentContainer>
               <h1>{t("chatbot_route_intro_title")}</h1>
               <p>{t("chatbot_route_intro_description")}</p>

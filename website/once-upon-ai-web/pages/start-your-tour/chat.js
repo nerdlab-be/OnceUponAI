@@ -218,15 +218,15 @@ export default function Chat() {
   return (
     <div>
       <Head>
-        <title>{t("chat_with_jos")}</title>
-        <meta name="description" content="Chat met Jos" />
+        <title>{t("chat_with_Drako")}</title>
+        <meta name="description" content="Chat met Drako" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <CenteredPageContainer>
         <WidthContainer>
           <ChatWrapper>
-            <RobotImage src="/jos.png" width={250} height={250} alt="Robot Image" />
+            <RobotImage src="/drako.png" width={250} height={250} alt="Robot Image" />
             <ChatbotContainer>
               <Chatbot config={updatedConfig} messageParser={MessageParser} actionProvider={ActionProvider} />
               <StartRoute onClick={goToRoute}>{t("start_route")}</StartRoute>
