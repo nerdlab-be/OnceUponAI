@@ -12,7 +12,7 @@ export default function FullscreenControl({ onFullscreen }) {
 
     control.onAdd = function () {
       const button = L.DomUtil.create("button");
-      button.innerText = "🖥️";
+      button.innerText = "↕️";
       button.style = `
         font-family: "Mazius Review Extra", sans-serif;
         background-color: transparent;

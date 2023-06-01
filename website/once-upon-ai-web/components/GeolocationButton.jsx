@@ -20,7 +20,7 @@ const Description = (props) => {
         onAdd: (map) => {
           const helpButton = L.DomUtil.create("button", "");
           helpButtonRef.current = helpButton;
-          helpButton.innerText = `🚩`;
+          helpButton.innerText = `📍`;
           helpButton.style = `
           font-family: "Mazius Review Extra", sans-serif;
           background-color: transparent;
