@@ -139,14 +139,15 @@ const Adress = styled.p`
  */
 function ArtworkModal({ artwork, showModal, closeModal }) {
   const { t } = useTranslation();
-
+  let description = artwork.description.replace(/Het clip ai model/gi, "Drago");
+  description = description.replace(/clip ai/gi, "drago");
   return (
     <ReactModal isOpen={showModal} onRequestClose={closeModal} style={customStyles}>
       <CloseButtonX onClick={closeModal}>&times;</CloseButtonX>
       <Container>
         <Title>{artwork.title}</Title>
         {artwork.image_url && <Image src={artwork.image_url} alt={artwork.title} />}
-        <Description>{artwork.description}</Description>
+        <Description>{description}</Description>
         <Adress>{artwork.address}</Adress>
         <CloseButton onClick={closeModal}>{t("close_info")}</CloseButton>
       </Container>
