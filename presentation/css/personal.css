@@ -1,0 +1,32 @@
+/* @font-face {
+	font-family: "Mazius Review Extra";
+	src: url("../css/Mazius_Font_Family/MAZIUS_REVIEW_20.09_Italic_400.otf") format("opentype");
+	font-weight: normal;
+	font-style: italic;
+} */
+
+@font-face {
+	font-family: "Mazius Review Extra";
+	src: url("../css/Mazius_Font_Family/MAZIUS_REVIEW_20.09_Regular_400.otf") format("opentype");
+}
+/* 
+@font-face {
+	font-family: "Mazius Review Extra";
+	src: url("../styles/Mazius_Font_Family/MAZIUS_REVIEW_20.09_Italic_400.otf") format("opentype");
+	font-weight: normal;
+	font-style: italic;
+} */
+
+h1, h2, h3{
+	font-family: 'Mazius Review Extra' !important;
+    font-weight: 400;
+}
+
+ *{
+    font-family: "Source Code Pro", sans-serif !important   ;
+}
+
+.reveal .slides section {
+    background-color: transparent;
+    /* Add any other necessary styles for the slide */
+  }
