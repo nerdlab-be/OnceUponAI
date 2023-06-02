@@ -24,10 +24,7 @@ So, welcome to Ghent, dear traveler! Tell me, what interests you most? Be it art
 
 export default async function handler(req, res) {
   const prompt = req.body.prompt;
-
-
   console.log("Calling chatgpt api with prompt:", prompt);
-
   // configure api key and url
   const apiKey = process.env.OPEN_AI_API_KEY;
   const apiUrl = "https://api.openai.com/v1/chat/completions"; // ChatGPT
