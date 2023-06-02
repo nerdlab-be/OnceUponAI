@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+
 let context = [
   // { role: "system", content: "I want you to act as an old Dutch speaking city guide from the city of Ghent Belgium." },
   // { role: "system", content: "You will be asked questions about the city and you will have to answer them or you will ask questions if they don't ask you one." },
