@@ -80,7 +80,7 @@ const CloseButtonX = styled.button`
 `;
 
 const CloseButton = styled.button`
-margin-left: 17px;
+margin: 17px;
 font-family: "Mazius Review Extra", sans-serif;
 max-width: 150px;
 position: relative;
@@ -93,8 +93,8 @@ text-align: center;
 transition: all 1s ease;
 cursor: pointer;
 grid-area: close;
-align-self: end;
-
+align-self: begin;
+background: transparent;
 &:hover {
   opacity: 0.67;
   transform: scale(0.95);
@@ -118,6 +118,9 @@ align-self: end;
 &:before {
   left: 0;
   transform: translate(-50%, -9.5px);
+}
+@media (min-width: 768px) {
+  align-self: end;
 }
 `;
 
