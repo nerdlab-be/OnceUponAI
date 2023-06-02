@@ -114,6 +114,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 const conversationActive = (isActive) => {
   document.querySelector(".react-chatbot-kit-chat-input").disabled = !isActive;
   document.querySelector(".react-chatbot-kit-chat-btn-send").disabled = !isActive;
+  if(isActive){
+    document.querySelector('.react-chatbot-kit-chat-input').focus();
+  }
 }
 
 export default ActionProvider;
