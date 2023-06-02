@@ -62,14 +62,17 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const handleName = async (message) => {
+    conversationActive(false);
 		conversation.push(message);
-		message = 'Use max 25 words to greet the user with the name '+ message + '. Propose to do a city tour and ask about the users interests. Keep writing in Dutch.';
+		message = 'Use max 25 words to greet the user with the name '+ message + '';
     const response = await sendMessageToChatbot(message);
     const botMessage = createChatBotMessage(response);
     addResponse(botMessage);
+    conversationActive(true);
   };
 
   const handleGPT = async (message, questionNumber) => {
+    conversationActive(false);
 		conversation.push(message);
     // message += "Respond briefly but enthousiast to " + message + ", which is an answer to " + questions[questionNumber-1] ;
     // message += "Ask a question about " + questions[questionNumber];
@@ -79,6 +82,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     console.log("Response:", response);
     const botMessage = createChatBotMessage(response);
     addResponse(botMessage);
+    conversationActive(true);
   };
 
   const handleLastMessage = async () => {
@@ -106,5 +110,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     </div>
   );
 };
+
+const conversationActive = (isActive) => {
+  document.querySelector(".react-chatbot-kit-chat-input").disabled = !isActive;
+  document.querySelector(".react-chatbot-kit-chat-btn-send").disabled = !isActive;
+}
 
 export default ActionProvider;
