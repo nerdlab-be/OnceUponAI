@@ -1,5 +1,4 @@
 import fetch from "node-fetch";
-
 let context = [
   // { role: "system", content: "I want you to act as an old Dutch speaking city guide from the city of Ghent Belgium." },
   // { role: "system", content: "You will be asked questions about the city and you will have to answer them or you will ask questions if they don't ask you one." },
@@ -24,6 +23,7 @@ So, welcome to Ghent, dear traveler! Tell me, what interests you most? Be it art
 
 export default async function handler(req, res) {
   const prompt = req.body.prompt;
+
 
   console.log("Calling chatgpt api with prompt:", prompt);
 

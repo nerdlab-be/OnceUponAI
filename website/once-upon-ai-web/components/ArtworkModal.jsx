@@ -142,8 +142,8 @@ const Adress = styled.p`
  */
 function ArtworkModal({ artwork, showModal, closeModal }) {
   const { t } = useTranslation();
-  let description = artwork.description.replace(/Het clip ai model/gi, "Drago");
-  description = description.replace(/clip ai/gi, "drago");
+  let description = artwork.description.replace(/Het clip ai model/gi, "Drako");
+  description = description.replace(/clip ai/gi, "drako");
   return (
     <ReactModal isOpen={showModal} onRequestClose={closeModal} style={customStyles}>
       <CloseButtonX onClick={closeModal}>&times;</CloseButtonX>
