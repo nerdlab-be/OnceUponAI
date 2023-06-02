@@ -215,6 +215,7 @@ export default function Home() {
         <title>Once Upon AI</title>
         <meta name="description" content="Homepage for Once Upon AI" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Head>
 
       <PageContainer>

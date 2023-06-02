@@ -3,6 +3,7 @@ import { createChatBotMessage } from "react-chatbot-kit";
 const init_message = "Hey! Mijn naam is Drako ik ben je gids voor vandaag, hoe heet jij?"
 
 const MyAvatar = (props) => {
+  // ugly fix to focus on input field
   document.querySelector('.react-chatbot-kit-chat-input').focus();
   return <div className="react-chatbot-kit-chat-bot-avatar-container"><p className="react-chatbot-kit-chat-bot-avatar-letter">Dr</p></div>
 }
