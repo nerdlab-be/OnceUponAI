@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useMap } from "react-leaflet";
 import L from "leaflet";
+import ReactDOMServer from 'react-dom/server';
+import { BiCurrentLocation } from 'react-icons/bi';
 
 
 
@@ -20,7 +22,8 @@ const Description = (props) => {
         onAdd: (map) => {
           const helpButton = L.DomUtil.create("button", "");
           helpButtonRef.current = helpButton;
-          helpButton.innerText = `📍`;
+          // helpButton.innerText = `📍`;
+					helpButton.innerHTML = ReactDOMServer.renderToString(<BiCurrentLocation />);
           helpButton.style = `
           font-family: "Mazius Review Extra", sans-serif;
           background-color: transparent;
@@ -30,7 +33,7 @@ const Description = (props) => {
           box-sizing: border-box;
           position: relative;
           border: 1.5px solid black;
-          padding: 8px 12px;
+          padding: 12px;
           text-align: center;
           overflow: hidden;
           -webkit-transition: all 1s ease;
@@ -40,6 +43,7 @@ const Description = (props) => {
           cursor: pointer; 
           background: rgba(255, 255, 255, 0.4)  ;
           border-radius: 15px;
+					display: flex;
           &:hover {
             opacity: 0.67;
             transform: scale(0.95);

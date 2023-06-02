@@ -51,7 +51,7 @@ const StartRoute = styled.button`
   font-family: "Mazius Review Extra", sans-serif;
   background-color: transparent;
   color: white;
-  margin-top: 8px;
+  margin-top: 16px;
   box-sizing: border-box;
   position: relative;
   border: 1.5px solid white;
